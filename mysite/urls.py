@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from server import views
+import server
+from server import views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+     path('', views.UploadCSV.as_view(), name = 'upload-csv'),
 ]
